@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "ChatGPT Log Organizer",
+  "version": "1.0",
+  "description": "ChatGPT 질문 내역 저장 및 Markdown 다운로드 도구",
+  "permissions": ["activeTab", "scripting", "storage", "downloads", "unlimitedStorage"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://chatgpt.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
